@@ -28,16 +28,13 @@ jobs:
     - run: npm install
     
     
-    # action criada especialmente para o Cypress    
-    - name: Cypress run
-      uses: cypress-io/github-action@v2.8.2
-      with:
-        record: true
-        group: 'N5-Aglz'
-      env:
-        # pass the Dashboard record key as an environment variable
-        CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-        
+    # executar testes
+    - run: npm run test
+    - run: npm run test:functional
+    - run: npm run test:contract
+    - run: npm run test:healthcheck
+    
+    
     # upload dos vídeos gerados    
     - name: Upload videos
       uses: actions/upload-artifact@v2.2.0
