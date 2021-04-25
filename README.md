@@ -4,7 +4,6 @@
 ---
 Projeto desenvolvido para o desafio do quarto módulo do Agilizei Bootcamp.
 
-:construction: Em construção :construction:
 
 ## :books: Conceitos Apresentados no Módulo
 - Conceitos sobre Web Service
@@ -38,7 +37,7 @@ Basta selecionar a spec que deseja executar.
 
 
 ## :link: CI com Github Actions
--
+https://github.com/nayaraquino/cypress_bootcamp_challenge_04/actions/runs/783323269
 
 
 ## :bookmark_tabs: Resultado dos Testes
