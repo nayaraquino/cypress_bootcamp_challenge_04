@@ -46,6 +46,21 @@ OU
 $ npx cypress run
 ```
 
+## :card_index_dividers: Como Executar os Testes com Filtro
+
+- Testes Healthcheck
+```bash
+$ npm run test:healthcheck
+```
+- Testes de Contrato
+```bash
+$ npm run test:contract
+```
+- Testes Funcionais
+```bash
+$ npm run test:functional
+```
+
 ## ▶️ Testes em Execução
  #### Teste 1 - Ping
  ![ping](https://user-images.githubusercontent.com/71460952/116003482-894b5f00-a5d4-11eb-9d3c-c1f63ab353d9.gif)
