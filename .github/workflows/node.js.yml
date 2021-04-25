@@ -41,9 +41,6 @@ jobs:
     
     # executar testes
     - run: npm run test
-    - run: npm run test:functional
-    - run: npm run test:contract
-    - run: npm run test:healthcheck
     
     
     # upload dos vídeos gerados    
