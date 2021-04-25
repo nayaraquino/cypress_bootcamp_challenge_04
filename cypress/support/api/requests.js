@@ -8,7 +8,19 @@ class Requests {
         })
     }
 
-    // REQUISIÇÕES DE SUCESSO - 2XX, 3XX
+    // AUTH
+    postAuth() {
+        return cy.request({
+            method: 'POST',
+            url: 'auth',
+            body: {
+                username: 'admin',
+                password: 'password123'
+            }
+        })
+    }
+
+    // SUCCESS REQUESTS - 2XX, 3XX
     getBooking() {
         return cy.request({
             method: 'GET',
@@ -98,19 +110,10 @@ class Requests {
         })
     }
 
-    postAuth() {
-        return cy.request({
-            method: 'POST',
-            url: 'auth',
-            body: {
-                username: 'admin',
-                password: 'password123'
-            }
-        })
-    }
 
 
-    // REQUISIÇÕES DE FALHA - 4XX, 5XX
+
+    // ERROR REQUESTS - 4XX, 5XX
     updateBookingdWithoutToken(response) {
         const id = response.body.bookingid
 
@@ -185,7 +188,7 @@ class Requests {
 
         return cy.request({
             method: 'DELETE',
-            url: 'booking/1'+id,
+            url: 'booking/1' + id,
             headers: {
                 Cookie: 'token=' + Cypress.env('token')
             },

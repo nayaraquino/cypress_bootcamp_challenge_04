@@ -3,10 +3,13 @@
 import requests from '../support/api/requests'
 import assertions from '../support/api/assertions'
 
-context('Ping', () => {
+context('Ping @healthcheck', () => {
     it('Verificar se a aplicação está no ar @healthcheck', () => {
-        requests.getPing().then(getPingResponse => {
-            assertions.shouldHaveStatus(getPingResponse, 201)
+        requests.getBooking().then(getBookingResponse => {
+            assertions.shouldHaveStatus(getBookingResponse, 200)
+            assertions.shouldHaveResponseHeaders(getBookingResponse)
+            assertions.shouldDuractionBeFast(getBookingResponse)
+            assertions.shouldBookingIdBePresent(getBookingResponse)
         })
     });
 });

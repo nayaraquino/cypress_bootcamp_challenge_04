@@ -1,0 +1,29 @@
+{
+  "name": "Aulas",
+  "version": "1.0.0",
+  "description": "--- Projeto desenvolvido para o desafio do segundo módulo do Agilizei Bootcamp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "test:functional": "npx cypress open --env grep=@functional",
+    "test:contract": "npx cypress open --env grep=@contract",
+    "test:healthcheck": "npx cypress open --env grep=@healthcheck"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayaraquino/cypress_bootcamp_challenge_04.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nayaraquino/cypress_bootcamp_challenge_04/issues"
+  },
+  "homepage": "https://github.com/nayaraquino/cypress_bootcamp_challenge_04#readme",
+  "dependencies": {
+    "cypress-select-tests": "^1.7.0"
+  },
+  "devDependencies": {
+    "cy-spok": "github:bahmutov/cy-spok"
+  }
+}
