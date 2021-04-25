@@ -1,0 +1,52 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    
+    
+    # action criada especialmente para o Cypress    
+    - name: Cypress run
+      uses: cypress-io/github-action@v2.8.2
+      with:
+        record: true
+        group: 'N5 Aglz'
+      env:
+        # pass the Dashboard record key as an environment variable
+        CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+    
+    
+    # executar testes
+    - run: npm run test
+    
+    
+    # upload dos vídeos gerados    
+    - name: Upload videos
+      uses: actions/upload-artifact@v2.2.0
+      if: always()
+      with:
+        name: videos
+        path: cypress/videos
