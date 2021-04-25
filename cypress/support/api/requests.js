@@ -138,6 +138,7 @@ class Requests {
 
     updateInexistentBooking(response) {
         const id = response.body.bookingid
+
         return cy.request({
             method: 'DELETE',
             url: 'booking/1' + id,
@@ -159,9 +160,9 @@ class Requests {
         })
     }
 
-    updateBookingWithIvalidToken(response) {
+    updateBookingWithInvalidToken(response) {
         const id = response.body.bookingid
-
+        
         return cy.request({
             method: 'PUT',
             url: 'booking/' + id,

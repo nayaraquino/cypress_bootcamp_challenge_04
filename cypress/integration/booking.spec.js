@@ -118,10 +118,10 @@ context('Booking', () => {
 
     it('Alterar reserva com token inválido @functional', () => {
         requests.postBooking().then(postBookingResponse => {
-            requests.updateBookingWithIvalidToken(postBookingResponse).then(updateBookingWithIvalidTokenResponse => {
-                assertions.shouldHaveStatus(updateBookingWithIvalidTokenResponse, 403)
-                assertions.shouldDuractionBeFast(updateBookingWithIvalidTokenResponse)
-                assertions.shouldBookingIdBePresent(updateBookingWithIvalidTokenResponse)
+            requests.updateBookingWithInvalidToken(postBookingResponse).then(updateBookingWithInvalidTokenResponse => {
+                assertions.shouldHaveStatus(updateBookingWithInvalidTokenResponse, 403)
+                assertions.shouldDuractionBeFast(updateBookingWithInvalidTokenResponse)
+                assertions.shouldBookingIdBePresent(updateBookingWithInvalidTokenResponse)
             })
         })
     });
