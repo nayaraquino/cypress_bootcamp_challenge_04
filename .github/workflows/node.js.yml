@@ -21,21 +21,19 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    
+    
+    - name: Setup Node.js environment
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+        
+    #instalar dependências
     - run: npm install
     
-    
-    # action criada especialmente para o Cypress    
-    - name: Cypress run
-      uses: cypress-io/github-action@v2.8.2    
-    
     # executar testes
-    - run: npm run test
-    
-    
+    - run: npx cypress run
+        
     # upload dos vídeos gerados    
     - name: Upload videos
       uses: actions/upload-artifact@v2.2.0
