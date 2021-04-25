@@ -39,6 +39,12 @@ Após isso, é só escolher a spec desejada e assistir a execução dos testes.
 
 ![running test](https://user-images.githubusercontent.com/71460952/114319822-7ec79a80-9ae9-11eb-951e-66e0c20e730a.gif)
 
+OU
+
+```bash
+# Na pasta Aulas, execute:
+$ npx cypress run
+```
 
 ## ▶️ Testes em Execução
  #### Teste 1 - Ping
