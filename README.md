@@ -11,9 +11,13 @@ Projeto desenvolvido para o desafio do quarto módulo do Agilizei Bootcamp.
 - Testes de API automatizados
 - Teste de validação de contrato
 - Filtros de testes com Tags
+- Utilização do Insomnia
 
 
-## API Utilizada
+## :hammer_and_wrench: Tecnologias Utilizadas
+- [Cypress](https://www.cypress.io/)
+- [Node.js](https://nodejs.org/en/)
+- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 
 ## :checkered_flag: Como Executar o Projeto
@@ -25,14 +29,12 @@ Basta selecionar a spec que deseja executar.
 ![running test](https://user-images.githubusercontent.com/71460952/114319822-7ec79a80-9ae9-11eb-951e-66e0c20e730a.gif)
 
 
-
 ## ▶️ Testes em Execução
  #### Teste 1 - Ping
- ![register](https://user-images.githubusercontent.com/71460952/114318927-85eca980-9ae5-11eb-9845-c076f5e3d6e4.gif)
+ ![ping](https://user-images.githubusercontent.com/71460952/116003482-894b5f00-a5d4-11eb-9d3c-c1f63ab353d9.gif)
 
- 
  #### Teste 2 - Booking
- ![login](https://user-images.githubusercontent.com/71460952/114320891-89386300-9aee-11eb-8194-89c40cf486a2.gif)
+ ![booking](https://user-images.githubusercontent.com/71460952/116003487-8c464f80-a5d4-11eb-969c-42a5bbb2184a.gif)
 
 
 ## :link: CI com Github Actions
@@ -40,13 +42,11 @@ Basta selecionar a spec que deseja executar.
 
 
 ## :bookmark_tabs: Resultado dos Testes
+ #### Ping
+ ![ping](https://user-images.githubusercontent.com/71460952/116003557-d5969f00-a5d4-11eb-83db-180e486b6f96.png)
 
-
-
-## :hammer_and_wrench: Tecnologias Utilizadas
-- [Cypress](https://www.cypress.io/)
-- [Node.js](https://nodejs.org/en/)
-- [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+ #### Booking
+ ![booking](https://user-images.githubusercontent.com/71460952/116003560-d7f8f900-a5d4-11eb-9c29-c679a55e119b.png)
 
 
 ##
